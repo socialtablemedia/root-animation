@@ -1,11 +1,14 @@
 const canvas = document.getElementById('rootsCanvas');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
-// Test: Draw a red rectangle
-ctx.fillStyle = 'red';
-ctx.fillRect(50, 50, 100, 100);
+// Set canvas size to full screen
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas(); // Initial resize
+window.addEventListener('resize', resizeCanvas); // Resize on window change
+
 
 // Track mouse position
 let mouse = { x: null, y: null, active: false };
