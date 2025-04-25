@@ -3,6 +3,10 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Test: Draw a red rectangle
+ctx.fillStyle = 'red';
+ctx.fillRect(50, 50, 100, 100);
+
 // Track mouse position
 let mouse = { x: null, y: null, active: false };
 
